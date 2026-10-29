@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.0/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         processIsolation="false"
+         stopOnFailure="false">
+    <testsuites>
+        <testsuite name="Steadfast Unit">
+            <directory suffix="Test.php">./tests/Unit</directory>
+        </testsuite>
+        <testsuite name="Steadfast Feature">
+            <directory suffix="Test.php">./tests/Feature</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <env name="APP_ENV" value="testing"/>
+        <env name="APP_KEY" value="base64:6Cu/ozMDvi+eLJSx39YqH4aY/4hYqP7ZcQ46Zg7K/gE="/>
+        <env name="STEADFAST_API_KEY" value="test_api_key_123"/>
+        <env name="STEADFAST_SECRET_KEY" value="test_secret_key_456"/>
+        <env name="STEADFAST_WEBHOOK_TOKEN" value="test_webhook_token_789"/>
+    </php>
+</phpunit>
+
